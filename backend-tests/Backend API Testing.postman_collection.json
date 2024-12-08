@@ -1,0 +1,1584 @@
+{
+	"info": {
+		"_postman_id": "5438c591-6964-411e-845f-733e047d0697",
+		"name": "Backend API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40276323"
+	},
+	"item": [
+		{
+			"name": "Get Homepage Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/Homepage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"Homepage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login Endpoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Login Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "250"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fa-veweeoOsVnuj+pmkYI1QhHM3Cag\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Dec 2024 23:16:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjEzMzYyLCJleHAiOjE3MzQyMTgxNjJ9.iTJchizlCZIn9_sAI2fOZOTXbnrTdsi1hSBWoy2PmHA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"age\": 30,\n    \"temperature\": 37,\n    \"humidity\": 45,\n    \"priority\": \"Normal\",\n    \"preferedHumidity\": 40,\n    \"preferedTemperature\": 22,\n    \"ImageUrl\": \"https://example.com/john-image.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"patient"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Patient Data Endpoint",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"John\",\n    \"age\": 30,\n    \"temperature\": 37,\n    \"humidity\": 45,\n    \"priority\": \"Normal\",\n    \"preferedHumidity\": 40,\n    \"preferedTemperature\": 22,\n    \"ImageUrl\": \"https://example.com/john-image.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"patient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16-m0NX9C2Ebo98zz77AT1nW7eEqDM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 00:22:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User added succesfully"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"674342554e1b454c79974acd\",\n    \"firstname\": \"Jane Updated\",\n    \"age\": 87,\n    \"temperature\": 20,\n    \"humidity\": 80,\n    \"priority\": \"High\",\n    \"preferedHumidity\": 82,\n    \"preferedTemperature\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"674342554e1b454c79974acd\",\n    \"firstname\": \"Jane Updated\",\n    \"age\": 87,\n    \"temperature\": 20,\n    \"humidity\": 80,\n    \"priority\": \"High\",\n    \"preferedHumidity\": 82,\n    \"preferedTemperature\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-PcUq3ZKGOTwiYLvbslbkJ9dKZFs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 00:24:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Succefully Updated !!"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"674342554e1b454c79974acd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"674342554e1b454c79974acd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-/qmH7NJyA0xgIFbxw+4SYdWPoFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 14:29:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unsuccessfull in deleting item"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/ Admin Login (Invalid Credentials)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Keshavv857@gmail.com\",\n  \"password\": \"WrongPassword123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/adminlogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"adminlogin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/ Admin Login (Invalid Credentials)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Keshavv857@gmail.com\",\n  \"password\": \"WrongPassword123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/adminlogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"adminlogin"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-La30IV3IxG4lUSPZkoBsB25RUbw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 00:45:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Incorrect password\"\n}"
+				},
+				{
+					"name": "http://localhost:3200/admin/ Admin Login (Invalid Credentials)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Keshavv857@gmail.com\",\n  \"password\": \"WrongPassword123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/adminlogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"adminlogin"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-La30IV3IxG4lUSPZkoBsB25RUbw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 00:45:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Incorrect password\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"age\": 30,\n    \"temperature\": 37,\n    \"humidity\": 45,\n    \"priority\": \"Normal\",\n    \"preferedHumidity\": 40,\n    \"preferedTemperature\": 22,\n    \"ImageUrl\": \"https://example.com/john-image.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"patient"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/patient",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"John\",\n    \"age\": 30,\n    \"temperature\": 37,\n    \"humidity\": 45,\n    \"priority\": \"Normal\",\n    \"preferedHumidity\": 40,\n    \"preferedTemperature\": 22,\n    \"ImageUrl\": \"https://example.com/john-image.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"patient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16-m0NX9C2Ebo98zz77AT1nW7eEqDM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 14:29:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User added succesfully"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/Get All Patients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjY2MjI5LCJleHAiOjE3MzQyNzEwMjl9.eF7kqPP-B3XbwEv2OcrrHcmkopneWDwqjpAgjJXx5sk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/admin/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"patients"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/Get All Patients",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjY2MjI5LCJleHAiOjE3MzQyNzEwMjl9.eF7kqPP-B3XbwEv2OcrrHcmkopneWDwqjpAgjJXx5sk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3200/admin/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"patients"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 14:29:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>Cannot GET /admin/patients</pre>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/Admin Login Missing Credentials",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token\", \"your-token-here\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});",
+							"",
+							"pm.test(\"Response message matches\", function () {",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.message).to.eql(\"Admin email not recognized\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/adminlogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"adminlogin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin Login Missing Credentials",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/adminlogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"adminlogin"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-ILIcYU3Zsoc9oTZX3dvJN2bS1KE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 14:30:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Admin email not recognized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/user/Create User with Valid Data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate random email to avoid conflicts during testing",
+							"const randomEmail = `user_${Math.floor(Math.random() * 10000)}@example.com`;",
+							"pm.environment.set(\"user_email\", randomEmail);",
+							"",
+							"// Prepare the request body dynamically",
+							"pm.request.body.raw = JSON.stringify({",
+							"    firstname: \"TestUser\",",
+							"    age: 25,",
+							"    temperature: 98.6,",
+							"    humidity: 40,",
+							"    priority: \"High\",",
+							"    preferedHumidity: 50,",
+							"    preferedTemperature: 70,",
+							"    email: randomEmail,",
+							"    password: \"TestPassword123\"",
+							"});",
+							"",
+							"// Log the generated email for debugging",
+							"console.log(\"Generated email:\", randomEmail);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Get the response as plain text",
+							"const responseText = pm.response.text();",
+							"",
+							"// Test 1: Check if the status code is 200",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Test 2: Check if the response contains the success message",
+							"pm.test(\"Response message is correct\", function () {",
+							"    pm.expect(responseText).to.eql(\"Login is created succesfully\");",
+							"});",
+							"",
+							"// Log the response for debugging",
+							"console.log(\"Response body:\", responseText);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"password\": \"Password123\",\n    \"email\": \"john.doe@example.com\",\n    \"address\": \"123 Main Street\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User with Valid Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"John\",\n    \"password\": \"Password123\",\n    \"email\": \"john.doe@example.com\",\n    \"address\": \"123 Main Street\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-QviFVANAIY3zGIsMvVhNufss/+0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 16:09:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Login is created succesfully"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/user/Create User Missing Fields",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Pre-Request Script to dynamically set fields for the request body",
+							"",
+							"// Generate a dummy password and address",
+							"pm.environment.set(\"test_password\", \"TestPassword123\");",
+							"pm.environment.set(\"test_address\", \"123 Main Street\");",
+							"",
+							"// Leave email and firstname empty to simulate missing required fields",
+							"pm.environment.set(\"test_email\", \"\");",
+							"pm.environment.set(\"test_firstname\", \"\");",
+							"",
+							"// Log for debugging purposes",
+							"console.log(\"Pre-request variables set:\");",
+							"console.log(\"Password:\", pm.environment.get(\"test_password\"));",
+							"console.log(\"Address:\", pm.environment.get(\"test_address\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check for the 400 status code indicating validation failure",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"// Check for a specific error message in the response",
+							"pm.test(\"Response contains validation error\", function () {",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.message).to.include(\"Email is required\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"{{test_firstname}}\",\n    \"password\": \"{{test_password}}\",\n    \"email\": \"{{test_email}}\",\n    \"address\": \"{{test_address}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User Missing Fields",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"{{test_firstname}}\",\n    \"password\": \"{{test_password}}\",\n    \"email\": \"{{test_email}}\",\n    \"address\": \"{{test_address}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-TaHVkcSeiVExzmb1tIgUnNU9ZRs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 16:18:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Email is required"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/Get Homepage Data Structure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response contains message and data\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property(\"message\", \"Fetch data successfully\");",
+							"    pm.expect(jsonData).to.have.property(\"data\").that.is.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/homepage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"homepage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Homepage Data Structure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/homepage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"homepage"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "851"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"353-8hFvfsxdVGOvyg2m6kc2ADtyDsU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 16:36:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Fetch data successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6754e673377eda03ede777b1\",\n            \"firstname\": \"John\",\n            \"age\": 30,\n            \"temperature\": 37,\n            \"humidity\": 45,\n            \"priority\": \"Normal\",\n            \"preferedHumidity\": 40,\n            \"preferedTemperature\": 22\n        },\n        {\n            \"_id\": \"6754e6d7377eda03ede777b2\",\n            \"firstname\": \"John\",\n            \"age\": 30,\n            \"temperature\": 37,\n            \"humidity\": 45,\n            \"priority\": \"Normal\",\n            \"preferedHumidity\": 40,\n            \"preferedTemperature\": 22\n        },\n        {\n            \"_id\": \"6754ea6e377eda03ede777bd\",\n            \"firstname\": \"John\",\n            \"age\": 30,\n            \"temperature\": 37,\n            \"humidity\": 45,\n            \"priority\": \"Normal\",\n            \"preferedHumidity\": 40,\n            \"preferedTemperature\": 22\n        },\n        {\n            \"_id\": \"6755a5bae0fd6105a24699f8\",\n            \"firstname\": \"John\",\n            \"age\": 30,\n            \"temperature\": 37,\n            \"humidity\": 45,\n            \"priority\": \"Normal\",\n            \"preferedHumidity\": 40,\n            \"preferedTemperature\": 22\n        },\n        {\n            \"_id\": \"6755ad2ee0fd6105a24699fa\",\n            \"firstname\": \"John\",\n            \"age\": 30,\n            \"temperature\": 37,\n            \"humidity\": 45,\n            \"priority\": \"Normal\",\n            \"preferedHumidity\": 40,\n            \"preferedTemperature\": 22\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/Update Patient Invalid Data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"invalid_ID\", \"invalid-id-format\");",
+							"pm.environment.set(\"invalid_firstname\", \"\");",
+							"pm.environment.set(\"invalid_age\", -5);",
+							"pm.environment.set(\"invalid_preferedHumidity\", null);",
+							"pm.environment.set(\"invalid_preferedTemperature\", null);",
+							"",
+							"console.log(\"Invalid data set for Update Patient test:\");",
+							"console.log({",
+							"    ID: pm.environment.get(\"invalid_ID\"),",
+							"    firstname: pm.environment.get(\"invalid_firstname\"),",
+							"    age: pm.environment.get(\"invalid_age\"),",
+							"    preferedHumidity: pm.environment.get(\"invalid_preferedHumidity\"),",
+							"    preferedTemperature: pm.environment.get(\"invalid_preferedTemperature\")",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check for a 400 Bad Request status code",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"// Check for a 400 status code indicating invalid input",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"// Check that the response contains an error message",
+							"pm.test(\"Response contains validation error\", function () {",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.message).to.include(\"Invalid data\");",
+							"});",
+							"",
+							"// Log the response for debugging",
+							"console.log(\"Response body:\", pm.response.json());",
+							"// Check for a specific error message in the response",
+							"pm.test(\"Response contains validation error\", function () {",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.message).to.include(\"Invalid data\");",
+							"});",
+							"",
+							"// Log the response for debugging purposes",
+							"console.log(\"Response body:\", pm.response.json());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjEzMzYyLCJleHAiOjE3MzQyMTgxNjJ9.iTJchizlCZIn9_sAI2fOZOTXbnrTdsi1hSBWoy2PmHA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ID\": \"invalid-id\",\n    \"firstname\": \"\",\n    \"age\": -10,\n    \"preferedHumidity\": null,\n    \"preferedTemperature\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Patient Invalid Data",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjEzMzYyLCJleHAiOjE3MzQyMTgxNjJ9.iTJchizlCZIn9_sAI2fOZOTXbnrTdsi1hSBWoy2PmHA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": \"invalid-id\",\n    \"firstname\": \"\",\n    \"age\": -10,\n    \"preferedHumidity\": null,\n    \"preferedTemperature\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-PcUq3ZKGOTwiYLvbslbkJ9dKZFs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 16:47:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Succefully Updated !!"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3200/admin/delete ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response indicates no match\", function () {",
+							"    var jsonData = pm.response.text();",
+							"    pm.expect(jsonData).to.include(\"No matching document found to delete\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjEzMzYyLCJleHAiOjE3MzQyMTgxNjJ9.iTJchizlCZIn9_sAI2fOZOTXbnrTdsi1hSBWoy2PmHA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"64d1f859eb5419aa9db6f841\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/admin/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"admin",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3200/admin/delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzMzNjEzMzYyLCJleHAiOjE3MzQyMTgxNjJ9.iTJchizlCZIn9_sAI2fOZOTXbnrTdsi1hSBWoy2PmHA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": \"64d1f859eb5419aa9db6f841\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/admin/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"admin",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-/qmH7NJyA0xgIFbxw+4SYdWPoFY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Dec 2024 16:55:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unsuccessfull in deleting item"
+				}
+			]
+		}
+	]
+}
